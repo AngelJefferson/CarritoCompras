@@ -1,0 +1,21 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+
+# Paquetes NuGet
+packages/
+*.nupkg
+
+# Archivos de usuario
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+
+# Publicación
+publish/
