@@ -54,7 +54,7 @@
 
                 <input id="txtid" type="text" value="0" />
 
-                <div class="row g-2">
+                <div class="row g-1">
 
                     <div class="col-sm-6">
                         <label for="txtnombres" class="form-label">Nombres</label>
@@ -123,9 +123,8 @@
                 { "data": "Apellido", "width": "25%" },
                 { "data": "Correo", "width": "30%" },
                 {
-                    "data": "Activo",
-                    "render": function (data) {
-                        if (data) {
+                    "data": "Activo","render": function (valor) {
+                        if (valor) {
                             return '<span class="badge bg-success">SI</span>';
                         } else {
                             return '<span class="badge bg-danger">NO</span>';
@@ -133,10 +132,14 @@
                     },
                 },
                 {
-                    "defaultContent":   ' <button type="button" class="btn btn-primary btn-sm btn-editar"><i class="fas fa-pen"></i></button>' +
-                        ' <button type="button" class="btn btn-danger btn-sm ms-2 btn-eliminar"><i class="fas fa-trash"></i></button>',
+                    "defaultContent":
+                        '<div class="d-flex justify-content-center">' +
+                        '<button type="button" class="btn btn-primary btn-sm btn-editar me-2"><i class="fas fa-pen"></i></button>' +
+                        '<button type="button" class="btn btn-danger btn-sm btn-eliminar"><i class="fas fa-trash"></i></button>' +
+                        '</div>',
                     "orderable": false,
                     "searchable": false,
+                    "className": "text-center"
                 }
             ],
             language: {
